@@ -1,0 +1,31 @@
+{
+  "name": "mock-api",
+  "version": "0.0.1",
+  "description": "A simple node application to mock an API backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lusffs/mock-api.git"
+  },
+  "keywords": [
+    "api-mock",
+    "node"
+  ],
+  "author": "Conrad Ohlsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lusffs/mock-api/issues"
+  },
+  "homepage": "https://github.com/lusffs/mock-api#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "walk": "^2.3.14"
+  }
+}
