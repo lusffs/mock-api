@@ -25,6 +25,11 @@ walker.on('end', function() {
 
   for (let i = 0; i < files.length; i++) {
     let filePath = files[i];
+    
+    if (filePath.indexOf("response.json") === -1) {
+      continue;
+    }
+
     filePath = filePath.replace("/response.json", "");
     filePath = filePath.replace("./", "/");
 
@@ -46,6 +51,12 @@ walker.on('end', function() {
     }      
   }
 console.log(`- - - - - - - - - - - - - - - - - - - - - - - - - `)
+    
+  app.get("*", (req, res) => {
+    console.log(`\x1b[31mMISSING: ${req.url}\x1b[0m`);
+    res.sendStatus(404)
+  })
+
   // Start the server
   app.listen(process.env.PORT)
   console.log(`Server is up and running on http://localhost:${process.env.PORT}`)
